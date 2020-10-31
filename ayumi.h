@@ -11,8 +11,8 @@ enum {
 };
 
 struct tone_channel {
-  int tone_period;
-  int tone_counter;
+  double tone_period;
+  double tone_counter;
   int tone;
   int t_off;
   int n_off;
@@ -59,7 +59,7 @@ struct ayumi {
 
 int ayumi_configure(struct ayumi* ay, int is_ym, double clock_rate, int sr);
 void ayumi_set_pan(struct ayumi* ay, int index, double pan, int is_eqp);
-void ayumi_set_tone(struct ayumi* ay, int index, int period);
+void ayumi_set_tone(struct ayumi* ay, int index, double period);
 void ayumi_set_noise(struct ayumi* ay, int period);
 void ayumi_set_mixer(struct ayumi* ay, int index, int t_off, int n_off, int e_on);
 void ayumi_set_volume(struct ayumi* ay, int index, int volume);
